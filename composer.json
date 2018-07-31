@@ -5,6 +5,6 @@
         "symfony/twig-bridge": "^3.4",
     },
     "autoload": {
-        "psr-4": { "": "lib/" }
+        "psr-4": { "": "src/" }
     }
 }
