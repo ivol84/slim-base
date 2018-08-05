@@ -3,6 +3,7 @@
         "slim/slim": "^3.0",
         "slim/twig-view": "^2.4",
         "symfony/twig-bridge": "^3.4",
+        "zendframework/zend-stdlib": "^3.2"
     },
     "autoload": {
         "psr-4": { "": "src/" }

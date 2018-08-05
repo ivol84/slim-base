@@ -4,6 +4,20 @@ namespace Controller;
 
 class HelloController implements SlimController
 {
+    private $container;
+    /**
+     * HelloController constructor.
+     */
+    public function __construct($container)
+    {
+        $this->container = $container;
+    }
+
+    public function sayHi()
+    {
+        // You can access to container thrue $this
+        $this->container->get('view')->render($this->container->get('response'), "index.twig");
+    }
 
     /**
      * Example middleware invokable class
@@ -16,7 +30,6 @@ class HelloController implements SlimController
      */
     public function __invoke($request, $response, $arguments)
     {
-        // You can access to container thrue $this
-        $this->view->render("index.twig");
+        $this->sayHi();
     }
 }
